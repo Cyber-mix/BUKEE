@@ -7,7 +7,8 @@
 // @import "../blocks/modules";
 
 $light: #fff;
-$accent: #65e496;
+$accent: #96ebc2;
+$accent-gradient: linear-gradient(135deg, rgba(101, 228, 155, 1) 0%, rgba(101, 228, 176, 1) 100%);
 
 body {
     font-family: "Roboto Slab", serif;
@@ -126,7 +127,7 @@ body {
 
     &__btn {
         display: block;
-        background-color: $accent;
+        background: $accent-gradient;
         color: $light;
         text-decoration: none;
         max-width: 250px;
@@ -139,7 +140,7 @@ body {
         letter-spacing: 0.7px;
     }
 
-    &__btn-2{
+    &__btn-2 {
         max-width: 237px;
     }
 
@@ -212,7 +213,27 @@ body {
         margin-right: 44px;
     }
 }
+
 .block-counter {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    margin-top: 162px;
+    margin-left: 41px;
+    flex-wrap: wrap;
+    padding: 0px 69px;
+
+    p {
+        font-family: "Open Sans", serif;
+        text-align: center;
+        font-size: 18px;
+        
+        span {
+            font-family: "Roboto Slab", serif;
+            display: block;
+            font-weight: 100;
+            font-size: 80px;
+            color: $accent;
+            margin-bottom: 12px;
+        }
+    }
 }

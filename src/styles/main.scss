@@ -72,6 +72,10 @@ body {
     }
 }
 
+.block-author {
+    padding-top: 161px;
+}
+
 .block-text {
     flex-basis: calc(95% - 540px);
 
@@ -79,14 +83,20 @@ body {
         font-family: "Open Sans", serif;
         font-size: 18px;
         margin: 0;
-        margin-bottom: 31px;
+        margin-bottom: 19px;
         letter-spacing: 0.9px;
+    }
+
+    &__name-top {
+        margin-top: 17px;
+
     }
 
     &__title {
         font-size: 48px;
-        text-transform: uppercase;
         letter-spacing: 1.8px;
+        padding-top: 12px;
+        text-transform: uppercase;
 
         span {
             display: block;
@@ -98,6 +108,12 @@ body {
             padding-top: 11px;
             margin-bottom: 43px;
         }
+    }
+
+    &__title-author {
+        padding-top: 0;
+        text-transform: none;
+
     }
 
     &__description {
@@ -121,6 +137,10 @@ body {
         margin-bottom: 19px;
         padding: 15px 0px;
         letter-spacing: 0.7px;
+    }
+
+    &__btn-2{
+        max-width: 237px;
     }
 
     small {
@@ -164,10 +184,35 @@ body {
     }
 
     &-demo__author {
-        padding: 394px 0px 0px 86px;
-        height: 57vh;
+        position: relative;
+        top: 394px;
+        left: 87px;
         font-family: "Open Sans", serif;
         font-size: 15px;
         color: $accent;
     }
+}
+
+.block-author {
+    display: flex;
+    justify-content: space-between;
+}
+
+.block-ava {
+    position: relative;
+
+    &__svg {
+        position: absolute;
+        z-index: -1;
+        right: 0;
+    }
+
+    &__img {
+        margin-top: 48px;
+        margin-right: 44px;
+    }
+}
+.block-counter {
+    display: flex;
+    justify-content: space-around;
 }

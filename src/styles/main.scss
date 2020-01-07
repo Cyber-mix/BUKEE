@@ -274,6 +274,7 @@ p {
         margin-bottom: 24px;
     }
 
+    // main btn-------
     &__btn {
         display: block;
         background: $accent-gradient;
@@ -722,7 +723,7 @@ p {
 
 
 
-// ------------------block-5-expert-------------------
+// ------------------block 5 expert-------------------
 .block-expert {
     background-color: $bg-dark-gray;
     height: 845px;
@@ -777,7 +778,7 @@ p {
         right: 2px;
         bottom: 12px;
 
-        a{
+        a {
             color: $accent;
             text-decoration: none;
         }
@@ -793,8 +794,53 @@ p {
         position: relative;
         bottom: 159px;
         left: calc(50% - 135px);
-        // margin-top: 54px;
-        padding: 11px 9px 15px 11px;
+        padding: 11px 8px 15px 12px;
         letter-spacing: 0.8px;
+    }
+}
+
+// ------------------block 8 letter------------------
+
+.block-letter {
+    display: flex;
+    justify-content: space-between;
+
+    &-item {
+        flex-basis: calc(48% + 8px);
+    }
+
+    &__title {
+        position: relative;
+        bottom: 7px;
+        letter-spacing: 1.8px;
+    }
+
+    &__text {
+        position: relative;
+        top: 2px;
+        left: 2px;
+    }
+
+    &__input {
+        box-sizing: border-box;
+        position: relative;
+        bottom: 14px;
+        width: 100%;
+        background-color: #44444f;
+        border: none;
+        border-radius: 3px;
+        padding: 15px 28px;
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &__btn {
+        width: 100%;
+        max-width: none;
+        border: none;
+        letter-spacing: 0.9px;
+        margin-top: 6px;
+        padding: 13px 0 17px 3px;
     }
 }

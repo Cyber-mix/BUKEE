@@ -806,7 +806,7 @@ p {
     justify-content: space-between;
 
     &-item {
-        flex-basis: calc(48% + 8px);
+        flex-basis: calc(48% + 9px);
     }
 
     &__title {
@@ -825,22 +825,30 @@ p {
         box-sizing: border-box;
         position: relative;
         bottom: 14px;
+        left: 1px;
         width: 100%;
         background-color: #44444f;
         border: none;
         border-radius: 3px;
-        padding: 15px 28px;
+        padding: 15px 27px;
         &:focus {
             outline: none;
         }
+        &::placeholder {
+            font-family:"Open Sans", serif;
+            color: #9191b5;
+            letter-spacing: 0.27px;
+          }
     }
 
     &__btn {
+        position: relative;
+        left: 1px;
         width: 100%;
         max-width: none;
         border: none;
         letter-spacing: 0.9px;
         margin-top: 6px;
-        padding: 13px 0 17px 3px;
+        padding: 13px 0 17px 2.5px;
     }
 }

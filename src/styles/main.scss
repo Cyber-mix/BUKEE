@@ -4,7 +4,7 @@
 @import "vendor/libs";
 @import "base/fonts";
 @import "base/general";
-// @import "../blocks/modules";
+@import "../blocks/modules";
 
 $light: #fff;
 $bg-gray: #f5f6fa;
@@ -335,6 +335,13 @@ p {
         }
     }
 }
+
+
+
+
+
+
+
 
 
 
@@ -729,6 +736,20 @@ p {
     height: 845px;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // ------------------block 7 blog---------------------
 .block-blog {
     display: flex;
@@ -799,6 +820,26 @@ p {
     }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // ------------------block 8 letter------------------
 
 .block-letter {
@@ -806,7 +847,7 @@ p {
     justify-content: space-between;
 
     &-item {
-        flex-basis: calc(48% + 8px);
+        flex-basis: calc(48% + 9px);
     }
 
     &__title {
@@ -825,22 +866,46 @@ p {
         box-sizing: border-box;
         position: relative;
         bottom: 14px;
+        left: 1px;
         width: 100%;
         background-color: #44444f;
         border: none;
         border-radius: 3px;
-        padding: 15px 28px;
+        padding: 15px 27px;
         &:focus {
             outline: none;
         }
+        &::placeholder {
+            font-family:"Open Sans", serif;
+            color: #9191b5;
+            letter-spacing: 0.27px;
+          }
     }
 
     &__btn {
+        position: relative;
+        left: 1px;
         width: 100%;
         max-width: none;
         border: none;
         letter-spacing: 0.9px;
         margin-top: 6px;
-        padding: 13px 0 17px 3px;
+        padding: 13px 0 17px 2.5px;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ---------------------block 9 footer----------------------------

@@ -4,12 +4,13 @@
 @import "vendor/libs";
 @import "base/fonts";
 @import "base/general";
-@import "../blocks/modules";
+// @import "../blocks/modules";
 
 $light: #fff;
 $bg-gray: #f5f6fa;
 $bg-dark-gray: #44444f;
 $p-gray: #696980;
+$violet: #80809b;
 $accent: #44d17a;
 $accent-gradient: linear-gradient(135deg, rgb(101, 228, 156) 0%, rgb(101, 228, 176) 100%);
 
@@ -54,6 +55,9 @@ p {
     padding-bottom: 162px;
 }
 
+// .page-dark-gray {
+//     background-color: $bg-dark-gray;
+// }
 
 
 
@@ -732,8 +736,6 @@ p {
 
 // ------------------block 5 expert-------------------
 .block-expert {
-    background-color: $bg-dark-gray;
-    height: 845px;
 }
 
 
@@ -845,6 +847,7 @@ p {
 .block-letter {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 141px;
 
     &-item {
         flex-basis: calc(48% + 9px);
@@ -872,14 +875,16 @@ p {
         border: none;
         border-radius: 3px;
         padding: 15px 27px;
+
         &:focus {
             outline: none;
         }
+
         &::placeholder {
-            font-family:"Open Sans", serif;
-            color: #9191b5;
+            font-family: "Open Sans", serif;
+            color: $violet;
             letter-spacing: 0.27px;
-          }
+        }
     }
 
     &__btn {
@@ -909,3 +914,105 @@ p {
 
 
 // ---------------------block 9 footer----------------------------
+.footer {
+    background-color: $bg-dark-gray;
+    color: $violet;
+}
+
+.block-footer {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 160px;
+    padding-bottom: 135px;
+
+    &>div {
+        flex-basis: calc(30% + 13px);
+    }
+
+    &__about {
+        padding: 0;
+    }
+
+    &__logo {
+        display: block;
+        width: 137px;
+        height: 28px;
+        background-image: url(../img/svg/Logo-light.svg);
+        // background-repeat: no-repeat;
+    }
+
+    &__text {
+        padding-top: 11px;
+        letter-spacing: 0.6px;
+    }
+
+    &__copyright {
+        padding-top: 9px;
+        letter-spacing: 0.6px;
+    }
+
+    &__links {
+        position: relative;
+        top: 9px;
+        left: 96.5px;
+    }
+
+    &__title {
+        list-style-type: none;
+        font-size: 18px;
+        color: $accent;
+        text-transform: uppercase;
+        letter-spacing: 0.6px;
+
+        &_right {
+            position: relative;
+            left: 1px;
+        }
+    }
+
+    &__list {
+        list-style-type: none;
+        padding-top: 20px;
+        padding-left: 1px;
+        font-family: "Open Sans", serif;
+
+        &>li {
+            margin-bottom: 4px;
+
+            &>a {
+                text-decoration: none;
+                color: $violet;
+            }
+        }
+    }
+
+    &__contacts {
+        position: relative;
+        top: 9px;
+        left: 93px;
+    }
+
+    &__address {
+        padding-top: 5px;
+        letter-spacing: 0.6px;
+        margin-bottom: 12px;
+    }
+
+    &__social {
+
+        &>li {
+            display: inline-block;
+            color: #44d17a;
+            margin-right: 9px;
+            margin-bottom: 2px;
+            font-size: 15px;
+            position: relative;
+            right: 1px;
+            bottom: 1px;
+
+            &>a {
+                color: $accent;
+            }
+        }
+    }
+}

@@ -39,6 +39,8 @@ p {
 
 .page {
     padding-top: 160px;
+    padding-bottom: 160px;
+    position: relative;
 
     &-gray {
         background-color: $bg-gray;
@@ -46,6 +48,12 @@ p {
 
     &_title {
         font-size: 48px;
+    }
+    &__svg {
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        width: 100%;
     }
 }
 
@@ -265,7 +273,6 @@ p {
             text-align: center;
             letter-spacing: 1.9px;
             margin-left: 3px;
-            margin-top: 6px;
 
             span {
                 letter-spacing: 1px;
@@ -363,7 +370,7 @@ p {
 
     // block 7 blog
     &_left {
-        margin-bottom: 133px;
+        margin-top: 94px;
     }
 }
 
@@ -399,7 +406,6 @@ p {
     justify-content: space-between;
     margin-top: 193px;
     padding: 0 66px 0 83px;
-    margin-bottom: 160px;
 
     p {
         text-align: center;
@@ -458,7 +464,7 @@ p {
     display: flex;
     justify-content: space-between;
     padding-top: 45px;
-    padding-bottom: 266px;
+    padding-bottom: 106px;
 
     &-text {
         flex-basis: 39.8%;
@@ -560,8 +566,6 @@ p {
 
 // ---------------block-4-other-books-----------------
 .block-other-books {
-    height: 891px;
-
     .block-three-other-books {
         display: flex;
         justify-content: space-around;
@@ -707,9 +711,9 @@ p {
         background: $accent-gradient;
         color: $light;
         position: relative;
-        top: 118px;
         left: calc(50% - 1px);
         width: 220px;
+        margin-top: 118px;
         border: none;
         padding: 13px 0 17px 4px;
         transform: translateX(-50%);
@@ -737,42 +741,13 @@ p {
 // ------------------block 5 expert-------------------
 .block-carousel {
     text-align: center;
-    margin-top: 219px;
-    margin-bottom: 254px;
-
-    h3 {
-        color: $accent;
-        margin-bottom: 5px;
-    }
-
-    &__desc {
-        max-width: 760px;
-        margin: 0 auto;
-        line-height: 27px;
-
-    }
-
-    &__expert {
-        margin-bottom: 32px;
-    }
 
     &-ava {
         display: block;
         position: relative;
         width: 152px;
         height: 152px;
-        margin: 0 auto 27px;
-    }
-
-    &-bg {
-        display: block;
-        position: absolute;
-        top: 0;
-        right: -15px;
-        background-image: url(../img/bq.png);
-        background-repeat: no-repeat;
-        width: 48px;
-        height: 42px;
+        margin: 61px auto 28px;
     }
 
     &-thumb {
@@ -793,6 +768,35 @@ p {
             transform: translate(-50%, -50%);
             object-fit: cover;
         }
+    }
+
+    h3 {
+        color: $accent;
+        margin-bottom: 5px;
+        letter-spacing: 1.2px;
+    }
+
+    &-bg {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: -15px;
+        background-image: url(../img/bq.png);
+        background-repeat: no-repeat;
+        width: 48px;
+        height: 42px;
+    }
+
+    &__desc {
+        max-width: 760px;
+        margin: 0 auto;
+        line-height: 27px;
+        color: $violet;
+
+    }
+
+    &__expert {
+        margin-bottom: 32px;
     }
 
 }

@@ -735,10 +735,103 @@ p {
 
 
 // ------------------block 5 expert-------------------
-.block-expert {
+.block-carousel {
+    text-align: center;
+    margin-top: 219px;
+    margin-bottom: 254px;
+
+    h3 {
+        color: $accent;
+        margin-bottom: 5px;
+    }
+
+    &__desc {
+        max-width: 760px;
+        margin: 0 auto;
+        line-height: 27px;
+
+    }
+
+    &__expert {
+        margin-bottom: 32px;
+    }
+
+    &-ava {
+        display: block;
+        position: relative;
+        width: 152px;
+        height: 152px;
+        margin: 0 auto 27px;
+    }
+
+    &-bg {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: -15px;
+        background-image: url(../img/bq.png);
+        background-repeat: no-repeat;
+        width: 48px;
+        height: 42px;
+    }
+
+    &-thumb {
+        display: block;
+        position: relative;
+        width: 152px;
+        height: 152px;
+        overflow: hidden;
+        margin: 0 auto 0;
+        border-radius: 100%;
+
+        img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 152px;
+            height: 152px;
+            transform: translate(-50%, -50%);
+            object-fit: cover;
+        }
+    }
+
 }
 
+.slick-dots {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
 
+    &>li {
+        position: relative;
+        top: 35px;
+        margin: 0 5px;
+
+        &>button {
+            text-indent: -9999px;
+            width: 8px;
+            height: 8px;
+            border: none;
+            background-color: $accent;
+            border-radius: 100%;
+            line-height: 0;
+            font-size: 0;
+            cursor: pointer;
+            padding: 4px;
+
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+
+    &>li.slick-active {
+        &>button {
+            width: 37px;
+            border-radius: 10px;
+        }
+    }
+}
 
 
 

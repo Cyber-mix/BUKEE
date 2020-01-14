@@ -35,6 +35,11 @@ p {
     max-width: 1170px;
     margin: 0 auto;
     padding: 0;
+    &_dark-background {
+        background-color: #44444f;
+        padding-top: 93px;
+        padding-bottom: 182px;  
+    }
 }
 
 .page {
@@ -42,8 +47,17 @@ p {
     padding-bottom: 160px;
     position: relative;
 
+    &-main {
+        background: linear-gradient(120deg, rgb(58, 109, 134) 0%, rgb(20, 189, 166) 100%);
+        color: $light;
+        padding-bottom: 162px;
+    }
     &-gray {
         background-color: $bg-gray;
+        &_top {
+            padding-top: 166px;
+            padding-bottom: 0;
+        }
     }
 
     &_title {
@@ -55,13 +69,34 @@ p {
         top: 0;
         width: 100%;
     }
+
+    &-carousel {
+        padding-top: 0;
+        padding-bottom: 0;
+
+        &-top {
+            margin-bottom: -6px;
+        }
+
+        &-bottom {
+        }
+    }
+
+    &-events {
+        padding-top: 67px;
+        padding-bottom: 133px;
+    }
+
+    &-letter {
+        padding-bottom: 0;
+    }
 }
 
-.page-main {
-    background: linear-gradient(120deg, rgb(58, 109, 134) 0%, rgb(20, 189, 166) 100%);
-    color: $light;
-    padding-bottom: 162px;
-}
+// .page-main {
+//     background: linear-gradient(120deg, rgb(58, 109, 134) 0%, rgb(20, 189, 166) 100%);
+//     color: $light;
+//     padding-bottom: 162px;
+// }
 
 // .page-dark-gray {
 //     background-color: $bg-dark-gray;
@@ -318,7 +353,7 @@ p {
     }
 
     // block 6 event
-    &--width {
+    &__width {
         flex-basis: 49%;
         margin-top: -3px;
     }
@@ -370,7 +405,7 @@ p {
 
     // block 7 blog
     &_left {
-        margin-top: 94px;
+        margin-top: 87px;
     }
 }
 
@@ -520,6 +555,7 @@ p {
             border: none;
             padding: 13px 43px 17px 45px;
             letter-spacing: 0.7px;
+            outline: none;
         }
     }
 
@@ -968,6 +1004,7 @@ p {
         border: none;
         border-radius: 3px;
         padding: 15px 27px;
+        color: $violet;
 
         &:focus {
             outline: none;
@@ -989,6 +1026,7 @@ p {
         letter-spacing: 0.9px;
         margin-top: 6px;
         padding: 13px 0 17px 2.5px;
+        outline: none;
     }
 }
 
@@ -1016,7 +1054,7 @@ p {
     display: flex;
     justify-content: space-between;
     padding-top: 160px;
-    padding-bottom: 135px;
+    padding-bottom: 139px;
 
     &>div {
         flex-basis: calc(30% + 13px);

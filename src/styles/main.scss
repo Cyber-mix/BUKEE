@@ -38,7 +38,7 @@ p {
 
     &_dark-background {
         background-color: #44444f;
-        padding-top: 93px;
+        padding-top: 96px;
         padding-bottom: 182px;
     }
 }
@@ -88,12 +88,16 @@ p {
         padding-bottom: 0;
 
         &-top {
-            margin-bottom: -6px;
+            margin-bottom: -7px;
+        }
+
+        &-bottom {
+            position: absolute;
         }
     }
 
     &-events {
-        padding-top: 154px;
+        padding-top: 232px;
         padding-bottom: 133px;
     }
 
@@ -127,6 +131,9 @@ p {
     margin: 0 auto;
     padding-top: 50px;
     padding-bottom: 178px;
+    @media(max-width: 920px) {
+        flex-direction: column;
+    }
 
     &__logo {
         display: block;
@@ -135,6 +142,9 @@ p {
         background-image: url(../img/svg/Logo.svg);
         background-repeat: no-repeat;
         margin-bottom: 3px;
+        @media(max-width: 920px) {
+            margin-bottom: 40px;
+        }
     }
 
     &-list {
@@ -233,6 +243,9 @@ p {
 
 .block-text {
     flex-basis: calc(93% - 500px);
+    @media(max-width: 1020px) {
+        flex-basis: calc(93% - 340px);
+    }
 
     &__name {
         font-family: "Open Sans", serif;
@@ -375,6 +388,9 @@ p {
     &__width {
         flex-basis: 49%;
         margin-top: -3px;
+        @media(max-width: 1020px) {
+            flex-basis: calc(93% - 340px);
+        }
     }
 
     &-item {
@@ -435,17 +451,27 @@ p {
         position: absolute;
         z-index: -1;
         right: 0;
+        @media(max-width: 1020px) {
+            width: 300px;
+            height: 412px;
+        }
 
         // block 6 event
         &_left {
             top: 2px;
             left: -1px;
+            @media(max-width: 1020px) {
+                height: 512px;
+            }
         }
     }
 
     &__img {
         margin-top: 48px;
         margin-right: 44px;
+        @media(max-width: 1020px) {
+            width: 300px;
+        }
 
         // block 6 event
         &_left {
@@ -460,11 +486,17 @@ p {
     justify-content: space-between;
     margin-top: 193px;
     padding: 0 66px 0 83px;
+    @media(max-width:750px) {
+        flex-direction: column;
+    }
 
     p {
         text-align: center;
         font-size: 18px;
         letter-spacing: 0.7px;
+        @media(max-width:750px) {
+            padding-top: 30px;
+        }
 
         span {
             font-family: "Roboto Slab", serif;
@@ -521,7 +553,7 @@ p {
     padding-bottom: 80px;
 
     &-text {
-        flex-basis: 39.8%;
+        flex-basis: calc(82% - 494px);
 
         &__desc {
             text-align: justify;
@@ -531,7 +563,7 @@ p {
 
 
     &__table {
-        flex-basis: calc(49% - 2px);
+        flex-basis: 572px;
 
         &_list {
             margin-top: 25px;
@@ -556,12 +588,13 @@ p {
                 &:after {
                     content: "+";
                     position: absolute;
-                    top: 1px;
+                    top: calc(50% - 11px);
                     left: 1px;
                     font-family: "Open Sans", serif;
                     background: linear-gradient(90deg, rgb(95, 201, 168) 0%, rgb(95, 201, 183) 100%);
                     color: #fff;
-                    padding: 0 7px;
+                    padding: 11px 6.5px;
+                    line-height: 0;
                 }
             }
         }
@@ -584,7 +617,7 @@ p {
             font-family: "Roboto Slab", serif;
             font-size: 18px;
             font-weight: 700;
-            margin: 15px 23px 14px 3px;
+            margin: 15px 23px 14px 2px;
             letter-spacing: 0.9px;
         }
 
@@ -643,17 +676,17 @@ p {
 
             &:nth-child(1) {
                 position: relative;
-                right: 10px;
+                right: 11px;
             }
 
             &:nth-child(2) {
                 position: relative;
-                right: 1px;
+                right: 2px;
             }
 
             &:nth-child(3) {
                 position: relative;
-                left: 8px;
+                left: 7px;
             }
 
             &_name {
@@ -663,7 +696,7 @@ p {
                 color: #fff;
                 position: relative;
                 top: 71px;
-                left: 17px;
+                left: 18px;
                 letter-spacing: 1px;
 
                 &>span {
@@ -791,7 +824,7 @@ p {
 
 
 
-// ------------------block 5 expert-------------------
+// ------------------block 5 carousel-------------------
 .block-carousel {
     text-align: center;
 

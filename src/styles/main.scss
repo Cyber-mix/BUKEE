@@ -131,6 +131,7 @@ p {
     margin: 0 auto;
     padding-top: 50px;
     padding-bottom: 178px;
+
     @media(max-width: 920px) {
         flex-direction: column;
     }
@@ -142,6 +143,7 @@ p {
         background-image: url(../img/svg/Logo.svg);
         background-repeat: no-repeat;
         margin-bottom: 3px;
+
         @media(max-width: 920px) {
             margin-bottom: 40px;
         }
@@ -243,6 +245,7 @@ p {
 
 .block-text {
     flex-basis: calc(93% - 500px);
+
     @media(max-width: 1020px) {
         flex-basis: calc(93% - 340px);
     }
@@ -388,6 +391,7 @@ p {
     &__width {
         flex-basis: 49%;
         margin-top: -3px;
+
         @media(max-width: 1020px) {
             flex-basis: calc(93% - 340px);
         }
@@ -451,6 +455,7 @@ p {
         position: absolute;
         z-index: -1;
         right: 0;
+
         @media(max-width: 1020px) {
             width: 300px;
             height: 412px;
@@ -460,6 +465,7 @@ p {
         &_left {
             top: 2px;
             left: -1px;
+
             @media(max-width: 1020px) {
                 height: 512px;
             }
@@ -469,6 +475,7 @@ p {
     &__img {
         margin-top: 48px;
         margin-right: 44px;
+
         @media(max-width: 1020px) {
             width: 300px;
         }
@@ -486,6 +493,7 @@ p {
     justify-content: space-between;
     margin-top: 193px;
     padding: 0 66px 0 83px;
+
     @media(max-width:750px) {
         flex-direction: column;
     }
@@ -494,6 +502,7 @@ p {
         text-align: center;
         font-size: 18px;
         letter-spacing: 0.7px;
+
         @media(max-width:750px) {
             padding-top: 30px;
         }
@@ -545,6 +554,33 @@ p {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // ------------------block-3-about-------------------
 .block-about {
     display: flex;
@@ -552,20 +588,35 @@ p {
     padding-top: 45px;
     padding-bottom: 80px;
 
+    @media(max-width: 1020px) {
+        flex-direction: column;
+        max-width: 750px;
+        margin: 82px auto 0;
+    }
+
     &-text {
         flex-basis: calc(82% - 494px);
 
         &__desc {
             text-align: justify;
             margin-top: 20px;
+
+            @media(max-width: 1020px) {
+                flex-basis: 100%;
+            }
         }
     }
 
 
-    &__table {
+    &-table {
         flex-basis: 572px;
 
-        &_list {
+        @media(max-width: 1020px) {
+            flex-basis: 100%;
+            margin-top: 40px;
+        }
+
+        &__list {
             margin-top: 25px;
             padding: 0;
             counter-reset: list;
@@ -595,6 +646,19 @@ p {
                     color: #fff;
                     padding: 11px 6.5px;
                     line-height: 0;
+                }
+            }
+            &_next {
+                counter-reset: list 10;
+                position: relative;
+                &:before {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    top: -17px;
+                    width: 100%;
+                    height: 1px;
+                    background: linear-gradient(90deg, rgb(95, 201, 168) 0%, rgb(95, 201, 183) 100%);
                 }
             }
         }
@@ -824,6 +888,41 @@ p {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // ------------------block 5 carousel-------------------
 .block-carousel {
     text-align: center;
@@ -934,15 +1033,55 @@ p {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // ------------------block 7 blog---------------------
 .block-blog {
     display: flex;
     justify-content: space-between;
     margin-top: 88px;
 
+    @media(max-width: 900px) {
+        flex-direction: column;
+        max-width: 600px;
+        margin: 80px auto 0;
+    }
+
     &-item {
         flex-basis: 31.6%;
         position: relative;
+
 
         &:nth-child(3) {
             left: 2px;
@@ -960,24 +1099,25 @@ p {
 
 
     &__img {
-        // position: relative;
-        // width: 100%;
-        // height: 224px;
-        // overflow: hidden;
+        position: relative;
+        width: 100%;
+        height: 224px;
+        overflow: hidden;
         margin-bottom: 10px;
 
         img {
-            // position: absolute;
-            // top: 50%;
-            // left: 50%;
-            // width: 100%;
-            // height: 224px;
-            // transform: translate(-50%, -50%);
-            // object-fit: cover;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 224px;
+            transform: translate(-50%, -50%);
+            object-fit: cover;
         }
     }
 
     &__info {
+        flex-wrap: wrap;
         position: relative;
         right: 2px;
         bottom: 12px;

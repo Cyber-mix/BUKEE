@@ -9,3 +9,8 @@ $(document).ready(function(){
         autoplaySpeed: 2000,
     });
 });
+
+$("#nextContent").click(function(){
+    $("#nextContentList").fadeIn();
+    $("#nextContent").hide();
+  });

@@ -1606,12 +1606,20 @@ p {
 @media (max-width: 480px) {}
 
 @media (max-width: 768px) {
-    .header-list {
-        visibility: hidden;
-    }
 
     .header {
         padding-bottom: 0;
+
+        &-list {
+            display: block;
+            // justify-content: center;
+            font-size: 24px;
+            line-height: initial;
+            &__item {
+                margin-left: 0;
+                margin-bottom: 15px;
+            }
+        }
 
         &__menu-wrap {
             position: absolute;
@@ -1620,34 +1628,133 @@ p {
             .toggler {
                 visibility: visible;
                 position: fixed;
+                z-index: 2;
                 top: 0;
                 right: 0;
                 cursor: pointer;
                 width: 50px;
                 height: 50px;
                 margin: 10px;
-                border-radius: 3px;
-                border: 1px solid $accent;
-                background-color: $accent;
-                -webkit-appearance: none;
+                opacity: 0;
+                &:checked {
+                    + {
+                        .hamburger {
+                            .hamburger_1 {
+                                transform: rotate(135deg);
+                                &:before {
+                                    top: 0;
+                                    transform: rotate(90deg);
+                                }
+                                &:after {
+                                    top: 0;
+                                    transform: rotate(90deg);
+                                }
+                            }
+                        }
+                    }
+                    &:hover {
+                        + {
+                            .hamburger {
+                                .hamburger_1 {
+                                    transform: rotate(225deg);
+                                }
+                            }
+                        }
+                    }
+                    ~ {
+                        .menu {
+                            visibility: visible;
+                            >div {
+                                transform: scale(1);
+                                transition-duration: 0.75s;
+                                >div {
+                                    opacity: 1;
+                                    transition: opacity 0.4s ease 0.4s;
+                                }
+                            }
+                        }
+                    }
+                }
             }
 
-            .hamurger {
+            .hamburger {
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                position: absolute;
+                position: fixed;
                 z-index: 1;
                 top: 0;
                 right: 0;
                 width: 60px;
                 height: 60px;
-                background: $accent;
+                margin: 5px;
+                border-radius: 3px;
+                background: $accent-gradient;
+
+                .hamburger_1 {
+                    display: flex;
+                    flex: none;
+                    align-items: center;
+                    justify-content: center;
+                    position: relative;
+                    width: 60%;
+                    height: 2px;
+                    background: $light;
+                    transition: all 0.4s ease;
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        z-index: 1;
+                        top: -10px;
+                        width: 100%;
+                        height: 2px;
+                        background: inherit;
+                    }
+
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        z-index: 1;
+                        top: 10px;
+                        width: 100%;
+                        height: 2px;
+                        background: inherit;
+                    }
+                }
+            }
+            .menu {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                visibility: hidden;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+                >div {
+                    display: flex;
+                    flex: none;
+                    align-items: center;
+                    justify-content: center;
+                    background: $bg-dark-gray;
+                    border-radius: 50%;
+                    width: 200vw;
+                    height: 200vw;
+                    transform: scale(0);
+                    transition: all 0.4s ease;
+                    >div {
+                        text-align: center;
+                        max-width: 90vw;
+                        max-height: 100vh;
+                        opacity: 0;
+                        transition: opacity 0.4s ease;
+                    }
+                }
             }
         }
     }
-
-
     // &__menu-wrap {
     //         position: fixed;
     //         z-index: 1;
@@ -1712,6 +1819,11 @@ p {
     //             }
     //         }
 
+
+
+
+
+
     //         .hamurger {
     //             display: flex;
     //             align-items: center;
@@ -1757,6 +1869,12 @@ p {
     //                 }
     //             }
     //         }
+
+
+
+
+
+
 
     //         .menu {
     //             display: flex;

@@ -78,9 +78,9 @@ p {
         padding: 0;
 
         &-top {
-            margin-right: -1px;
+            // margin-right: -1px;
             margin-bottom: -7px;
-            margin-left: -1px;
+            // margin-left: -1px;
         }
 
         &-bottom {
@@ -164,7 +164,7 @@ p {
     justify-content: space-between;
     max-width: 1170px;
     margin: 0 auto;
-    padding-top: 50px;
+    padding-top: 26px;
     padding-bottom: 178px;
 
     .toggler {
@@ -177,7 +177,7 @@ p {
         height: 28px;
         background-image: url(../img/svg/Logo.svg);
         background-repeat: no-repeat;
-        margin-bottom: 3px;
+        margin-top: 18px;
     }
 
     &-list {
@@ -1649,6 +1649,8 @@ p {
 
                 h2 {
                     font-size: 22px;
+                    width: 160px;
+                    margin: auto;
 
                     &>span {
                         font-size: 11px;
@@ -1660,6 +1662,7 @@ p {
                 top: 230px;
                 font-size: 10px;
                 padding-left: 60px;
+                width: 120px;
             }
         }
     }
@@ -1836,7 +1839,7 @@ p {
                     flex: none;
                     align-items: center;
                     justify-content: center;
-                    background: $bg-dark-gray;
+                    background: rgba(58, 58, 58, 0.95);
                     border-radius: 50%;
                     width: 200vw;
                     height: 200vw;
@@ -1870,13 +1873,14 @@ p {
     }
 
     .block-book-demo {
-        width: 300px;
-        height: 430px;
+        width: 270px;
+        height: 400px;
 
         &__title {
-            top: 80px;
-            right: 9px;
+            top: 65px;
             font-size: 25px;
+            width: 200px;
+            margin: auto;
 
             span {
                 padding-top: 0;
@@ -1887,9 +1891,9 @@ p {
 
         &__author {
             font-size: 10px;
-            top: 325px;
-            left: 65px;
-            width: fit-content;
+            top: 290px;
+            left: 60px;
+            width: 100px;
         }
     }
 }
@@ -1927,6 +1931,15 @@ p {
         &__width {
             text-align: center;
         }
+
+        &-item__desc {
+            width: 80%;
+        }
+
+
+        &-item__btn {
+            margin: auto;
+        }
     }
 
     .block-author {
@@ -1934,7 +1947,7 @@ p {
     }
 
     .block-ava {
-        margin: auto;
+        margin: 50px auto 0;
     }
 
     .block-counter {
@@ -2015,12 +2028,11 @@ p {
         &-item {
 
             &__desc {
-                width: 80%;
                 margin: 30px auto;
             }
 
             &__btn {
-                margin: 24px auto 55px;
+                margin: 24px 0 55px;
             }
         }
     }

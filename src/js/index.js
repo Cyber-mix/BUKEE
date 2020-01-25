@@ -12,4 +12,5 @@ $(document).ready(function(){
 $("#nextContent").click(function(){
     $("#nextContentList").fadeIn();
     $("#nextContent").hide();
+    $("#expand-margin-bottom").css('margin-bottom','-150px');
   });

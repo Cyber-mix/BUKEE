@@ -903,7 +903,7 @@ p {
                 text-align: center;
                 text-transform: uppercase;
                 font-size: 24px;
-                color: #fff;
+                color: $light;
                 position: relative;
                 top: 71px;
                 left: 18px;
@@ -1601,9 +1601,96 @@ p {
 
 
 
-@media (max-width: 320px) {}
+@media (max-width: 320px) {
+    .block-letter {
 
-@media (max-width: 480px) {}
+        &__title {
+            font-size: 28px;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .block-ava {
+        &__svg {
+            position: absolute;
+            z-index: -1;
+            right: 0;
+            width: 250px;
+            height: 350px;
+
+
+            // block 6 event
+            &_left {
+                width: 250px;
+                height: 444px;
+                margin: 0;
+            }
+        }
+
+        &__img {
+            width: 250px;
+            height: 256px;
+
+            // block 6 event
+            &_left {
+                width: 250px;
+                height: 344px;
+            }
+        }
+    }
+
+    .block-product {
+        &__book {
+
+            &_cover {
+                width: 219px;
+                height: 359px;
+
+                h2 {
+                    font-size: 22px;
+
+                    &>span {
+                        font-size: 11px;
+                    }
+                }
+            }
+
+            &_author {
+                top: 230px;
+                font-size: 10px;
+                padding-left: 60px;
+            }
+        }
+    }
+
+    .block-letter {
+
+        &__title {
+            font-size: 35px;
+        }
+    }
+
+    .block-footer__about {
+        width: 80%;
+    }
+}
+
+
+
+@media (max-width: 640px) {
+    .block-about {
+        &-table {
+            &__list {
+                column-count: 1;
+            }
+        }
+    }
+
+    .block-product__more>p {
+        width: 80%;
+    }
+}
 
 @media (max-width: 768px) {
 
@@ -1615,6 +1702,7 @@ p {
             // justify-content: center;
             font-size: 24px;
             line-height: initial;
+
             &__item {
                 margin-left: 0;
                 margin-bottom: 15px;
@@ -1636,15 +1724,18 @@ p {
                 height: 50px;
                 margin: 10px;
                 opacity: 0;
+
                 &:checked {
                     + {
                         .hamburger {
                             .hamburger_1 {
                                 transform: rotate(135deg);
+
                                 &:before {
                                     top: 0;
                                     transform: rotate(90deg);
                                 }
+
                                 &:after {
                                     top: 0;
                                     transform: rotate(90deg);
@@ -1652,6 +1743,7 @@ p {
                             }
                         }
                     }
+
                     &:hover {
                         + {
                             .hamburger {
@@ -1661,12 +1753,15 @@ p {
                             }
                         }
                     }
+
                     ~ {
                         .menu {
                             visibility: visible;
+
                             >div {
                                 transform: scale(1);
                                 transition-duration: 0.75s;
+
                                 >div {
                                     opacity: 1;
                                     transition: opacity 0.4s ease 0.4s;
@@ -1701,6 +1796,7 @@ p {
                     height: 2px;
                     background: $light;
                     transition: all 0.4s ease;
+
                     &:before {
                         content: "";
                         position: absolute;
@@ -1722,6 +1818,7 @@ p {
                     }
                 }
             }
+
             .menu {
                 display: flex;
                 align-items: center;
@@ -1733,6 +1830,7 @@ p {
                 width: 100%;
                 height: 100%;
                 overflow: hidden;
+
                 >div {
                     display: flex;
                     flex: none;
@@ -1744,6 +1842,7 @@ p {
                     height: 200vw;
                     transform: scale(0);
                     transition: all 0.4s ease;
+
                     >div {
                         text-align: center;
                         max-width: 90vw;
@@ -1755,173 +1854,12 @@ p {
             }
         }
     }
-    // &__menu-wrap {
-    //         position: fixed;
-    //         z-index: 1;
-    //         top: 0;
-    //         left: 0;
-    //         // visibility: visible;
-
-    //         .toggler {
-    //             position: absolute;
-    //             z-index: 2;
-    //             top: 0;
-    //             left: 0;
-    //             cursor: pointer;
-    //             width: 50px;
-    //             height: 50px;
-    //             opacity: 0;
-
-    //             &:checked {
-    //                 + {
-    //                     .hamburger {
-    //                         >div {
-    //                             transform: rotate(135deg);
-
-    //                             &:before {
-    //                                 top: 0;
-    //                                 transform: rotate(90deg);
-    //                             }
-
-    //                             &:after {
-    //                                 top: 0;
-    //                                 transform: rotate(90deg);
-    //                             }
-    //                         }
-    //                     }
-    //                 }
-
-    //                 &:hover {
-    //                     + {
-    //                         .hamburger {
-    //                             >div {
-    //                                 transform: rotate(225deg);
-    //                             }
-    //                         }
-    //                     }
-    //                 }
-
-    //                 ~ {
-    //                     .menu {
-    //                         visibility: visible;
-
-    //                         >div {
-    //                             transform: scale(1);
-    //                             transition-duration: 0.75s;
-
-    //                             >div {
-    //                                 opacity: 1;
-    //                                 transition: opacity 0.4s ease 0.4s;
-    //                             }
-    //                         }
-    //                     }
-    //                 }
-    //             }
-    //         }
-
-
-
-
-
-
-    //         .hamurger {
-    //             display: flex;
-    //             align-items: center;
-    //             justify-content: center;
-    //             position: absolute;
-    //             z-index: 1;
-    //             top: 0;
-    //             left: 0;
-    //             width: 60px;
-    //             height: 60px;
-    //             padding: 1rem;
-    //             background: $accent;
-
-    //             .hamurger_1 {
-    //                 display: flex;
-    //                 flex: none;
-    //                 align-items: center;
-    //                 justify-content: center;
-    //                 position: relative;
-    //                 width: 100%;
-    //                 height: 2px;
-    //                 background: #fff;
-    //                 transition: all 0.4s ease;
-
-    //                 &::before {
-    //                     content: "";
-    //                     position: absolute;
-    //                     z-index: 1;
-    //                     top: -10px;
-    //                     width: 100%;
-    //                     height: 2px;
-    //                     background: inherit;
-    //                 }
-
-    //                 &::after {
-    //                     content: "";
-    //                     position: absolute;
-    //                     z-index: 1;
-    //                     top: 10px;
-    //                     width: 100%;
-    //                     height: 2px;
-    //                     background: inherit;
-    //                 }
-    //             }
-    //         }
-
-
-
-
-
-
-
-    //         .menu {
-    //             display: flex;
-    //             align-items: center;
-    //             justify-content: center;
-    //             visibility: hidden;
-    //             position: fixed;
-    //             top: 0;
-    //             left: 0;
-    //             width: 100%;
-    //             height: 100%;
-    //             overflow: hidden;
-
-    //             &_1 {
-    //                 display: flex;
-    //                 flex: none;
-    //                 align-items: center;
-    //                 justify-content: center;
-    //                 background: $violet;
-    //                 border-radius: 50%;
-    //                 width: 200vw;
-    //                 height: 200vw;
-    //                 transform: scale(0);
-    //                 transition: all 0.4s ease;
-
-    //                 &_2 {
-    //                     text-align: center;
-    //                     max-width: 90vw;
-    //                     max-height: 100vh;
-    //                     opacity: 0;
-    //                     transition: opacity 0.4s ease;
-    //                 }
-    //             }
-    //         }
-    //     }
-
-
 
     .block-text {
         &_main {
             margin-top: 0;
         }
     }
-
-
-
-
 
     .block-counter {
         flex-direction: column;
@@ -1936,36 +1874,22 @@ p {
         height: 430px;
 
         &__title {
-            text-align: center;
-            position: relative;
             top: 80px;
             right: 9px;
             font-size: 25px;
-            text-transform: uppercase;
-            font-weight: 600;
-            letter-spacing: 1.1px;
 
             span {
-                display: block;
                 padding-top: 0;
                 font-size: 11px;
                 margin-left: 3px;
-                font-family: "Open Sans", serif;
-                text-transform: initial;
-                color: $accent;
-                letter-spacing: 0.7px;
-                font-weight: 400;
             }
         }
 
         &__author {
-            font-family: "Open Sans", serif;
             font-size: 10px;
-            color: #44d17a;
-            position: relative;
             top: 325px;
             left: 65px;
-            letter-spacing: 0.1px;
+            width: fit-content;
         }
     }
 }
@@ -1979,15 +1903,6 @@ p {
     .page-main {
         padding-top: 0;
     }
-
-    // }
-    // .page-author {
-    //     padding-bottom: 100px;
-    // }
-
-    // .page-gray {
-    //     padding-top: 100px;
-    // }
 
     .header {
         flex-direction: column;
@@ -2020,10 +1935,6 @@ p {
 
     .block-ava {
         margin: auto;
-
-        &__svg {}
-
-        &__img {}
     }
 
     .block-counter {
@@ -2039,8 +1950,6 @@ p {
                 text-align: center;
             }
         }
-
-        &-social {}
     }
 
     .block-footer {
@@ -2057,16 +1966,11 @@ p {
             margin-top: 15px;
         }
     }
-
-    // .footer {
-    //     padding-top: 0;
-    //     padding-bottom: 0;
-    // }
 }
 
 @media (max-width: 1200px) {
     .page-letter {
-        width: 600px;
+        width: 60%;
         margin: 20px auto 0;
     }
 
@@ -2111,7 +2015,7 @@ p {
         &-item {
 
             &__desc {
-                width: 500px;
+                width: 80%;
                 margin: 30px auto;
             }
 
@@ -2126,14 +2030,7 @@ p {
         max-width: 750px;
         margin: 82px auto 0;
 
-        &-text {
-            &__desc {
-                // flex-basis: 100%;
-            }
-        }
-
         &-table {
-            // flex-basis: 100%;
             margin-top: 40px;
             margin-bottom: -250px;
         }
@@ -2200,10 +2097,6 @@ p {
 
         &__title {
             text-align: center;
-        }
-
-        &-item {
-            &__subscribe {}
         }
     }
 
